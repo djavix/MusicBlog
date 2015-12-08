@@ -71,7 +71,33 @@ CREATE TABLE CANCION
 	FK_GENERO int
 )
 
+CREATE TABLE LISTADEREPRODUCION
+(
+	ID int IDENTITY(1,1),
+	NOMBRE varchar(50) not null,
+	FECHA date not null,
+	DESCRIPCION varchar(max) not null,
+	FK_USUARIO int
+)
 
+CREATE TABLE MENU
+(
+	ID int IDENTITY(1,1),
+	NOMBREPAGINA varchar(max) not null,
+	URL varchar(max) not null
+)
+
+CREATE TABLE CANCION_LISTA
+(
+	FK_CANCION int,
+	FK_LISTA int
+)
+
+CREATE TABLE MENU_USUARIO
+(
+	FK_USUARIO int,
+	FK_MENU int
+)
 
 
 
