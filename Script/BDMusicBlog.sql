@@ -1,14 +1,14 @@
 -- -----------Tablas------------------
 CREATE TABLE USUARIO
 (
-	ID int IDENTITY(1,1),
+	ID int primary key IDENTITY(1,1),
 	NICK varchar(50) not null,
 	PASSWORD varchar(50) not null	
 )
 
 CREATE TABLE PERFIL
 (
-	ID int IDENTITY(1,1),
+	ID int primary key IDENTITY(1,1),
 	NOMBRE varchar(50) not null,
 	APELLIDO varchar(50) not null,
 	FECHANACIMIENTO date not null,
@@ -19,13 +19,13 @@ CREATE TABLE PERFIL
 
 CREATE TABLE ARTISTA
 (
-	ID int IDENTITY(1,1),
+	ID int primary key IDENTITY(1,1),
 	NOMBRE varchar(50) not null
 )
 
 CREATE TABLE GRUPO
 (
-	ID int IDENTITY(1,1),
+	ID int primary key IDENTITY(1,1),
 	NOMBRE varchar(50) not null
 )
 
@@ -39,7 +39,7 @@ CREATE TABLE PERTENECE
 
 CREATE TABLE BIOGRAFIA
 (
-	ID int IDENTITY(1,1),
+	ID int primary key IDENTITY(1,1),
 	NOMBRE varchar(50) not null,
 	APELLIDO varchar(50),
 	FECHANACIMIENTO date not null,
@@ -50,21 +50,21 @@ CREATE TABLE BIOGRAFIA
 
 CREATE TABLE GENERO
 (
-	ID int IDENTITY(1,1),
+	ID int primary key IDENTITY(1,1),
 	NOMBRE varchar(50) not null
 )
 
 CREATE TABLE DISCO
 (
-	ID int IDENTITY(1,1),
+	ID int primary key IDENTITY(1,1),
 	NOMBRE varchar(50) not null,
 	FK_ARTISTA int,
-	FK_GRUPO
+	FK_GRUPO int
 )
 
 CREATE TABLE CANCION
 (
-	ID int IDENTITY(1,1),
+	ID int primary key IDENTITY(1,1),
 	NOMBRE varchar(50) not null,
 	DURACION time not null,
 	BPM int,
@@ -74,7 +74,7 @@ CREATE TABLE CANCION
 
 CREATE TABLE LISTADEREPRODUCCION
 (
-	ID int IDENTITY(1,1),
+	ID int primary key IDENTITY(1,1),
 	NOMBRE varchar(50) not null,
 	FECHA date not null,
 	DESCRIPCION varchar(max) not null,
@@ -83,7 +83,7 @@ CREATE TABLE LISTADEREPRODUCCION
 
 CREATE TABLE MENU
 (
-	ID int IDENTITY(1,1),
+	ID int primary key IDENTITY(1,1),
 	NOMBREPAGINA varchar(max) not null,
 	URL varchar(max) not null
 )
