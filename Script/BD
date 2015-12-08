@@ -1,0 +1,43 @@
+CREATE TABLE USUARIO
+(
+	ID int IDENTITY(1,1),
+	NICK varchar(50) not null,
+	PASSWORD varchar(50) not null	
+)
+
+CREATE TABLE ARTISTA
+(
+	ID int IDENTITY(1,1),
+	NOMBRE varchar(50) not null
+)
+
+CREATE TABLE GRUPO
+(
+	ID int IDENTITY(1,1),
+	NOMBRE varchar(50) not null
+)
+
+CREATE TABLE PERTENECE
+(
+	FK_ARTISTA int,
+	FK_GRUPO int,
+	FECHAINGRESO date not null,
+	FECHASALIDA date
+)
+
+CREATE TABLE BIOGRAFIA
+(
+	
+)
+
+CREATE TABLE PERFIL
+(
+	ID int IDENTITY(1,1),
+	NOMBRE varchar(50) not null,
+	APELLIDO varchar(50) not null,
+	FECHANACIMIENTO date not null,
+	SEXO char(1) not null,
+	CORREO varchar(50) not null,
+	FK_USUARIO int
+)
+
