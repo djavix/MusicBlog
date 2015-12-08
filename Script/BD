@@ -5,6 +5,17 @@ CREATE TABLE USUARIO
 	PASSWORD varchar(50) not null	
 )
 
+CREATE TABLE PERFIL
+(
+	ID int IDENTITY(1,1),
+	NOMBRE varchar(50) not null,
+	APELLIDO varchar(50) not null,
+	FECHANACIMIENTO date not null,
+	SEXO char(1) not null,
+	CORREO varchar(50) not null,
+	FK_USUARIO int
+)
+
 CREATE TABLE ARTISTA
 (
 	ID int IDENTITY(1,1),
@@ -27,17 +38,41 @@ CREATE TABLE PERTENECE
 
 CREATE TABLE BIOGRAFIA
 (
-	
+	ID int IDENTITY(1,1),
+	NOMBRE varchar(50) not null,
+	APELLIDO varchar(50),
+	FECHANACIMIENTO date not null,
+	HISTORIA varchar(max) not null,
+	FK_ARTISTA int,
+	FK_GRUPO int
 )
 
-CREATE TABLE PERFIL
+CREATE TABLE GENERO
+(
+	ID int IDENTITY(1,1),
+	NOMBRE varchar(50) not null
+)
+
+CREATE TABLE DISCO
 (
 	ID int IDENTITY(1,1),
 	NOMBRE varchar(50) not null,
-	APELLIDO varchar(50) not null,
-	FECHANACIMIENTO date not null,
-	SEXO char(1) not null,
-	CORREO varchar(50) not null,
-	FK_USUARIO int
+	FK_ARTISTA int,
+	FK_GRUPO
 )
+
+CREATE TABLE CANCION
+(
+	ID int IDENTITY(1,1),
+	NOMBRE varchar(50) not null,
+	DURACION time not null,
+	BPM int,
+	FK_DISCO int,
+	FK_GENERO int
+)
+
+
+
+
+
 
