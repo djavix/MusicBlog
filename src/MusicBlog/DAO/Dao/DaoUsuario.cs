@@ -10,5 +10,11 @@ namespace DAO.Dao
 {
     public class DaoUsuario : DaoBase<Usuario>, IDaoUsuario
     {
+        #region Constructor
+        public DaoUsuario()
+            : base()
+        {
+        }
+        #endregion
     }
 }
