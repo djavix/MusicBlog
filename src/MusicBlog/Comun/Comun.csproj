@@ -44,7 +44,9 @@
     <Compile Include="Entidades\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Mapeos\Perfil.hbm.xml" />
+  </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Mapeos\Usuario.hbm.xml" />
   </ItemGroup>
