@@ -39,6 +39,61 @@ namespace PruebasUnitarias.PruebasDao
             Assert.AreNotEqual(usuario.Id, 0);
             agregar = true;
         }
+
+        [Test]
+        public void Modificar()
+        {
+            dao.Agregar(usuario);
+            usuario.Nick = "sa";
+            dao.Modificar(usuario);
+            Usuario result = dao.BuscarPorId(usuario.Id);
+            Assert.AreEqual(usuario.Nick,result.Nick);
+            agregar = true;
+        }
+
+        [Test]
+        public void ConsultarPorId()
+        {
+            dao.Agregar(usuario);
+            Usuario result = dao.BuscarPorId(usuario.Id);
+            Assert.NotNull(result);
+            agregar = true;
+        }
+
+        [Test]
+        public void ConsultarTodos()
+        {
+            dao.Agregar(usuario);
+            IList<Usuario> list = dao.BuscarTodos();
+            Assert.NotNull(list);
+            Assert.IsTrue(list.Count > 0);
+            agregar = true;
+        }
+
+        [Test]
+        public void Login()
+        {
+            dao.Agregar(usuario);
+            Usuario result = dao.Login(usuario);
+            Assert.IsNotNull(result);
+            Assert.AreEqual(usuario.Nick,result.Nick);
+            agregar = true;
+        }
+
+        [Test]
+        public void ValidarNickUsuarioExiste()
+        {
+            dao.Agregar(usuario);
+            Assert.IsTrue(dao.ValidarNickUsuario(usuario));
+            agregar = true;
+        }
+
+        [Test]
+        public void ValidarNickUsuarioNoExiste()
+        {
+            Assert.IsFalse(dao.ValidarNickUsuario(usuario));
+        }
+
         #endregion
 
         #region TearDown
