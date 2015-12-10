@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="Mock.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PruebasDao\DaoPerfilTest.cs" />
     <Compile Include="PruebasDao\DaoUsuarioTest.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -27,8 +27,8 @@ namespace DAO.Dao
             {
                 IQueryOver<Usuario> query =
                     _session.QueryOver<Usuario>()
-                        .Where(x => x.Nick == usuario.Nick)
-                        .And(x => x.Password == usuario.Password);
+                        .Where(u => u.Nick == usuario.Nick)
+                        .And(u => u.Password == usuario.Password);
                 result = query.SingleOrDefault();
             }
             catch (Exception ex)
@@ -48,7 +48,7 @@ namespace DAO.Dao
             {
                 IQueryOver<Usuario> query =
                     _session.QueryOver<Usuario>()
-                        .Where(x => x.Nick == usuario.Nick);
+                        .Where(u => u.Nick == usuario.Nick);
                 user = query.SingleOrDefault();
                 if (user != null)
                     existe = true;

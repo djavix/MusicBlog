@@ -16,5 +16,16 @@ namespace PruebasUnitarias
             user.Password = "sa123!!";
             return user;
         }
+
+        public static Perfil ObtenerPefil()
+        {
+            Perfil perfil = new Perfil();
+            perfil.Nombre = "Javier";
+            perfil.Apellido = "Velasquez";
+            perfil.FechaNacimiento = new DateTime(1992, 7, 17);
+            perfil.Sexo = 'M';
+            perfil.Correo = "djavix.17@gmail.com";
+            return perfil;
+        }
     }
 }

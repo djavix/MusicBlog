@@ -14,5 +14,10 @@ namespace DAO.Fabrica
         {
             return new DaoUsuario();
         }
+
+        public static IDaoPerfil ObtenerDaoPerfil()
+        {
+            return new DaoPerfil();
+        }
     }
 }
