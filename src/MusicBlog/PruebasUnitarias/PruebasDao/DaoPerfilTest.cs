@@ -88,6 +88,7 @@ namespace PruebasUnitarias.PruebasDao
             Assert.IsNotNull(result);
             Assert.AreEqual(perfil.Id,result.Id);
             Assert.AreEqual(perfil.Usuario.Id,result.Usuario.Id);
+            agregar = true;
         }
         #endregion
 

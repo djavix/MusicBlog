@@ -39,8 +39,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Comando.cs" />
+    <Compile Include="ComandosPerfil\AgregarPerfil.cs" />
+    <Compile Include="ComandosPerfil\BuscarPerfil.cs" />
+    <Compile Include="ComandosPerfil\BuscarPerfiles.cs" />
+    <Compile Include="ComandosPerfil\BuscarPerfilPorUsuario.cs" />
+    <Compile Include="ComandosPerfil\EliminarPerfil.cs" />
+    <Compile Include="ComandosPerfil\ModificarPerfil.cs" />
+    <Compile Include="ComandosUsuario\AgregarUsuario.cs" />
+    <Compile Include="ComandosUsuario\BuscarUsuario.cs" />
+    <Compile Include="ComandosUsuario\BuscarUsuarios.cs" />
+    <Compile Include="ComandosUsuario\EliminarUsuario.cs" />
+    <Compile Include="ComandosUsuario\LoginUsuario.cs" />
+    <Compile Include="ComandosUsuario\ModificarUsuario.cs" />
+    <Compile Include="ComandosUsuario\ValidarNickUsuario.cs" />
+    <Compile Include="FabricaComando.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Comun\Comun.csproj">
+      <Project>{d45f1a01-295f-42b7-954b-e4be22633961}</Project>
+      <Name>Comun</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAO\DAO.csproj">
+      <Project>{4cf032a8-842e-4d92-b04b-de30d60750dd}</Project>
+      <Name>DAO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

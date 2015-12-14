@@ -55,10 +55,15 @@
   <ItemGroup>
     <Compile Include="Mock.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PruebasComando\TestsComandosUsuario.cs" />
     <Compile Include="PruebasDao\DaoPerfilTest.cs" />
     <Compile Include="PruebasDao\DaoUsuarioTest.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Comando\Comando.csproj">
+      <Project>{3311f367-01ae-4987-b7be-7a6b538bf411}</Project>
+      <Name>Comando</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Comun\Comun.csproj">
       <Project>{d45f1a01-295f-42b7-954b-e4be22633961}</Project>
       <Name>Comun</Name>
