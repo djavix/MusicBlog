@@ -39,12 +39,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contratos\IPresenterBase.cs" />
+    <Compile Include="Contratos\IPresenterUsuario.cs" />
+    <Compile Include="Presenters\PresenterBase.cs" />
+    <Compile Include="Presenters\PresenterUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Contratos\" />
-    <Folder Include="Presenters\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Comando\Comando.csproj">
       <Project>{3311f367-01ae-4987-b7be-7a6b538bf411}</Project>
