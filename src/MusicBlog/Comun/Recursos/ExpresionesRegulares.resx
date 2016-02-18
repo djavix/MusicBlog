@@ -117,61 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="TextAceptar" xml:space="preserve">
-    <value>Aceptar</value>
-  </data>
-  <data name="TextApellido" xml:space="preserve">
-    <value>Apellido</value>
-  </data>
-  <data name="TextAsterico" xml:space="preserve">
-    <value>*</value>
-  </data>
-  <data name="TextCancelar" xml:space="preserve">
-    <value>Cancelar</value>
-  </data>
-  <data name="TextCorreo" xml:space="preserve">
-    <value>Correo</value>
-  </data>
-  <data name="TextDosPuntos" xml:space="preserve">
-    <value>:</value>
-  </data>
-  <data name="TextEntrar" xml:space="preserve">
-    <value>Entrar</value>
-  </data>
-  <data name="TextFechaNacimiento" xml:space="preserve">
-    <value>Fecha Nacimiento</value>
-  </data>
-  <data name="TextNombre" xml:space="preserve">
-    <value>Nombre</value>
-  </data>
-  <data name="TextOk" xml:space="preserve">
-    <value>Ok</value>
-  </data>
-  <data name="TextParentesisAbrir" xml:space="preserve">
-    <value>(</value>
-  </data>
-  <data name="TextParentesisCerrar" xml:space="preserve">
-    <value>)</value>
-  </data>
-  <data name="TextPassword" xml:space="preserve">
-    <value>Password</value>
-  </data>
-  <data name="TextRegistrarse" xml:space="preserve">
-    <value>Registrarse</value>
-  </data>
-  <data name="TextRepetirPassword" xml:space="preserve">
-    <value>Repetir Password</value>
-  </data>
-  <data name="TextSexo" xml:space="preserve">
-    <value>Sexo</value>
-  </data>
-  <data name="TextSexoF" xml:space="preserve">
-    <value>F</value>
-  </data>
-  <data name="TextSexoM" xml:space="preserve">
-    <value>M</value>
-  </data>
-  <data name="TextUsuario" xml:space="preserve">
-    <value>Usuario</value>
+  <data name="Correo" xml:space="preserve">
+    <value>\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*</value>
   </data>
 </root>

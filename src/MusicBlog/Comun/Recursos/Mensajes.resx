@@ -117,61 +117,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="TextAceptar" xml:space="preserve">
-    <value>Aceptar</value>
+  <data name="CampoObligatorios" xml:space="preserve">
+    <value>Los campos marcados en rojo son obligatorios.&lt;br/&gt;</value>
   </data>
-  <data name="TextApellido" xml:space="preserve">
-    <value>Apellido</value>
+  <data name="CoincidenciaDePasswords" xml:space="preserve">
+    <value>Los passwords no coinciden.&lt;br/&gt;</value>
   </data>
-  <data name="TextAsterico" xml:space="preserve">
-    <value>*</value>
+  <data name="ErrorDeSistema" xml:space="preserve">
+    <value>Ha ocurrido un error en el sistema.</value>
   </data>
-  <data name="TextCancelar" xml:space="preserve">
-    <value>Cancelar</value>
+  <data name="FormatoCorreoErroneo" xml:space="preserve">
+    <value>El formato del correo es erroneo.&lt;br/&gt;</value>
   </data>
-  <data name="TextCorreo" xml:space="preserve">
-    <value>Correo</value>
+  <data name="RegistroExitoso" xml:space="preserve">
+    <value>Ha sido registrado de manera exitosa.</value>
   </data>
-  <data name="TextDosPuntos" xml:space="preserve">
-    <value>:</value>
-  </data>
-  <data name="TextEntrar" xml:space="preserve">
-    <value>Entrar</value>
-  </data>
-  <data name="TextFechaNacimiento" xml:space="preserve">
-    <value>Fecha Nacimiento</value>
-  </data>
-  <data name="TextNombre" xml:space="preserve">
-    <value>Nombre</value>
-  </data>
-  <data name="TextOk" xml:space="preserve">
-    <value>Ok</value>
-  </data>
-  <data name="TextParentesisAbrir" xml:space="preserve">
-    <value>(</value>
-  </data>
-  <data name="TextParentesisCerrar" xml:space="preserve">
-    <value>)</value>
-  </data>
-  <data name="TextPassword" xml:space="preserve">
-    <value>Password</value>
-  </data>
-  <data name="TextRegistrarse" xml:space="preserve">
-    <value>Registrarse</value>
-  </data>
-  <data name="TextRepetirPassword" xml:space="preserve">
-    <value>Repetir Password</value>
-  </data>
-  <data name="TextSexo" xml:space="preserve">
-    <value>Sexo</value>
-  </data>
-  <data name="TextSexoF" xml:space="preserve">
-    <value>F</value>
-  </data>
-  <data name="TextSexoM" xml:space="preserve">
-    <value>M</value>
-  </data>
-  <data name="TextUsuario" xml:space="preserve">
-    <value>Usuario</value>
+  <data name="TituloError" xml:space="preserve">
+    <value>Error</value>
   </data>
 </root>

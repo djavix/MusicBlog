@@ -70,6 +70,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Apellido.
+        /// </summary>
+        internal static string TextApellido {
+            get {
+                return ResourceManager.GetString("TextApellido", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to *.
         /// </summary>
         internal static string TextAsterico {
@@ -88,6 +97,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Correo.
+        /// </summary>
+        internal static string TextCorreo {
+            get {
+                return ResourceManager.GetString("TextCorreo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to :.
         /// </summary>
         internal static string TextDosPuntos {
@@ -102,6 +120,24 @@ namespace Resources {
         internal static string TextEntrar {
             get {
                 return ResourceManager.GetString("TextEntrar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fecha Nacimiento.
+        /// </summary>
+        internal static string TextFechaNacimiento {
+            get {
+                return ResourceManager.GetString("TextFechaNacimiento", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nombre.
+        /// </summary>
+        internal static string TextNombre {
+            get {
+                return ResourceManager.GetString("TextNombre", resourceCulture);
             }
         }
         
@@ -147,6 +183,42 @@ namespace Resources {
         internal static string TextRegistrarse {
             get {
                 return ResourceManager.GetString("TextRegistrarse", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Repetir Password.
+        /// </summary>
+        internal static string TextRepetirPassword {
+            get {
+                return ResourceManager.GetString("TextRepetirPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sexo.
+        /// </summary>
+        internal static string TextSexo {
+            get {
+                return ResourceManager.GetString("TextSexo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to F.
+        /// </summary>
+        internal static string TextSexoF {
+            get {
+                return ResourceManager.GetString("TextSexoF", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to M.
+        /// </summary>
+        internal static string TextSexoM {
+            get {
+                return ResourceManager.GetString("TextSexoM", resourceCulture);
             }
         }
         

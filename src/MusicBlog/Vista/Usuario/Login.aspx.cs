@@ -9,35 +9,48 @@ using Presentador.Presenters;
 
 namespace Vista.Usuario
 {
-    public partial class Login : System.Web.UI.Page, IPresenterUsuario
+    public partial class Login : System.Web.UI.Page, ILogin
     {
-        private PresenterUsuario _presentardor;
+        private PresenterLogin _presenter;
         protected void Page_Load(object sender, EventArgs e)
         {
+            _presenter = new PresenterLogin(this);
             if (!IsPostBack)
             {
-                _presentardor = new PresenterUsuario(this);
-                _presentardor.InicializarComponentesDeMensaje(btnEntrar.ClientID);
+                
             }
         }
 
+        protected void btnEntrar_OnClick(object sender, EventArgs e)
+        {
+            if (_presenter.Login(txtUser.Text,txtPasword.Text))
+            {
 
+            }
+        }
 
         public string Nick
         {
             get { return txtUser.Text; }
-            set { txtUser.Text = value; }
         }
 
         public string Password
         {
             get { return txtPasword.Text; }
-            set { txtPasword.Text = value; }
         }
 
-        protected void btnEntrar_OnClick(object sender, EventArgs e)
+        public void MostrarMensaje(bool accion, string titulo, string mensaje)
         {
-
+            mpeMensaje.Show();
+            btnCancelar.Visible = accion;
+            lblTitulo.Text = titulo;
+            lblMensaje.Text = mensaje;
+        }
+        
+        public object SessionUsuario
+        {
+            get { return Session["Usuario"]; }
+            set { Session["Usuario"] = value; }
         }
     }
 }

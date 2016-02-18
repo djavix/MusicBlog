@@ -58,6 +58,15 @@ namespace Vista {
         protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
         
         /// <summary>
+        /// btnOculto control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnOculto;
+        
+        /// <summary>
         /// mpeMensaje control.
         /// </summary>
         /// <remarks>
@@ -94,13 +103,13 @@ namespace Vista {
         protected global::System.Web.UI.WebControls.Label lblMensaje;
         
         /// <summary>
-        /// btnCancelar control.
+        /// btnCancelar2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCancelar;
+        protected global::System.Web.UI.WebControls.Button btnCancelar2;
         
         /// <summary>
         /// btnAceptar control.
