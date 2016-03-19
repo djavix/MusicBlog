@@ -70,6 +70,15 @@ namespace Comun.Recursos {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Debe indicar login y password para su ingreso..
+        /// </summary>
+        public static string CamposObligatoriosLogin {
+            get {
+                return ResourceManager.GetString("CamposObligatoriosLogin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Los passwords no coinciden.&lt;br/&gt;.
         /// </summary>
         public static string CoincidenciaDePasswords {
@@ -93,6 +102,15 @@ namespace Comun.Recursos {
         public static string FormatoCorreoErroneo {
             get {
                 return ResourceManager.GetString("FormatoCorreoErroneo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Usuario o password incorrectos..
+        /// </summary>
+        public static string LoginFailed {
+            get {
+                return ResourceManager.GetString("LoginFailed", resourceCulture);
             }
         }
         

@@ -1,9 +1,15 @@
 -- -----------Tablas------------------
+CREATE TABLE ROL
+(
+	ID int primary key IDENTITY(1,1),
+	NOMBRE varchar(50)
+)
 CREATE TABLE USUARIO
 (
 	ID int primary key IDENTITY(1,1),
 	NICK varchar(50) not null,
-	PASSWORD varchar(50) not null	
+	PASSWORD varchar(50) not null,
+	FK_ROL int
 )
 
 CREATE TABLE PERFIL
@@ -84,6 +90,7 @@ CREATE TABLE LISTADEREPRODUCCION
 CREATE TABLE MENU
 (
 	ID int primary key IDENTITY(1,1),
+	SECCION varchar(max) not null,
 	NOMBREPAGINA varchar(max) not null,
 	URL varchar(max) not null
 )
@@ -94,19 +101,21 @@ CREATE TABLE CANCION_LISTA
 	FK_LISTA int
 )
 
-CREATE TABLE MENU_USUARIO
+CREATE TABLE PERMISOLOGIA
 (
-	FK_USUARIO int,
+	FK_ROL int,
 	FK_MENU int
 )
 
 -- -------------------Claves foraneas------------------------------
+--USUARIO
+alter table usuario add constraint FK_ROL_USUARIO foreign key (fk_rol) references rol(id)
 
 --PERFIL
 alter table perfil add constraint FK_USUARIO_PERFIL foreign key (fk_usuario) references usuario(id)
 
 --MENU_USUARIO
-alter table menu_usuario add constraint FK_USUARIO_MENU_USUARIO foreign key (fk_usuario) references usuario(id)
+alter table menu_usuario add constraint FK_ROL_PERMISOLOGIA foreign key (fk_rol) references rol(id)
 alter table menu_usuario add constraint FK_MENU_MENU_USUARIO foreign key (fk_menu) references menu(id)
 
 --LISTADEREPRODUCION
@@ -131,3 +140,7 @@ alter table pertenece add constraint FK_GRUPO_PERTENECE foreign key (fk_grupo) r
 --BIOGRAFIA
 alter table biografia add constraint FK_ARTISTA_BIOGRAFIA foreign key (fk_artista) references artista(id)
 alter table biografia add constraint FK_GRUPO_BIOGRAFIA foreign key (fk_grupo) references grupo(id)
+
+------------------------------ Insert Fijos -------------------------------------------------
+insert into rol values('Administrador')
+insert into rol values('Usuario')

@@ -120,6 +120,9 @@
   <data name="CampoObligatorios" xml:space="preserve">
     <value>Los campos marcados en rojo son obligatorios.&lt;br/&gt;</value>
   </data>
+  <data name="CamposObligatoriosLogin" xml:space="preserve">
+    <value>Debe indicar login y password para su ingreso.</value>
+  </data>
   <data name="CoincidenciaDePasswords" xml:space="preserve">
     <value>Los passwords no coinciden.&lt;br/&gt;</value>
   </data>
@@ -128,6 +131,9 @@
   </data>
   <data name="FormatoCorreoErroneo" xml:space="preserve">
     <value>El formato del correo es erroneo.&lt;br/&gt;</value>
+  </data>
+  <data name="LoginFailed" xml:space="preserve">
+    <value>Usuario o password incorrectos.</value>
   </data>
   <data name="RegistroExitoso" xml:space="preserve">
     <value>Ha sido registrado de manera exitosa.</value>

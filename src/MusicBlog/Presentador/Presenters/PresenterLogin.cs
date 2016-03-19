@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Comando;
+using Comun.Entidades;
+using Comun.Recursos;
 using Presentador.Contratos;
 
 namespace Presentador.Presenters
@@ -16,11 +19,53 @@ namespace Presentador.Presenters
             view = page;
         }
 
-        public bool Login(string nick, string password)
+        public bool ValidarCampos()
+        {
+            bool valido = true;
+            if (view.Nick == string.Empty || view.Password == string.Empty)
+            {
+                view.MostrarMensaje(false,Mensajes.TituloError,Mensajes.CamposObligatoriosLogin);
+                valido = false;
+            }
+
+            return valido;
+        }
+
+        public bool Login()
         {
             bool existe = false;
 
-            return false;
+            try
+            {
+                Comando<Usuario, Usuario> comando = FabricaComando.ObtenerComandoLoginUsuario(ObtenerUsuario());
+                comando.Ejecutar();
+                if (comando.Resultado != null)
+                {
+                    view.SessionUsuario = comando.Resultado;
+                    existe = true;
+                }
+                else
+                {
+                    view.MostrarMensaje(false,Mensajes.TituloError,Mensajes.LoginFailed);
+                }
+            }
+            catch (Exception ex)
+            {
+
+                view.MostrarMensaje(false, Mensajes.TituloError, Mensajes.ErrorDeSistema);
+            }
+
+            return existe;
         }
+
+        #region Metodos Privados
+        private Usuario ObtenerUsuario()
+        {
+            Usuario usuario = new Usuario();
+            usuario.Nick = view.Nick;
+            usuario.Password = view.Password;
+            return usuario;
+        }
+        #endregion
     }
 }

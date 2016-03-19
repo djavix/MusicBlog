@@ -23,9 +23,12 @@ namespace Vista.Usuario
 
         protected void btnEntrar_OnClick(object sender, EventArgs e)
         {
-            if (_presenter.Login(txtUser.Text,txtPasword.Text))
+            if(_presenter.ValidarCampos())
             {
+                if (_presenter.Login())
+                {
 
+                }
             }
         }
 
