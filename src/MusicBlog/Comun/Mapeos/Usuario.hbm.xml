@@ -6,5 +6,7 @@
     </id>
     <property name="Nick"  column="NICK" not-null="true" />
     <property name="Password" column="PASSWORD" not-null="true"/>
+    <many-to-one name="Rol" class="Rol" column="FK_ROL" not-null="false" cascade="all" unique="false" fetch="join" foreign-key="ID"/>
+    
   </class>
 </hibernate-mapping>

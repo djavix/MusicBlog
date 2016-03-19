@@ -19,5 +19,10 @@ namespace DAO.Fabrica
         {
             return new DaoPerfil();
         }
+
+        public static IDaoRol ObtenerDaoRol()
+        {
+            return new DaoRol();
+        }
     }
 }

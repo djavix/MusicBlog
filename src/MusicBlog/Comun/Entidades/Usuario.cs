@@ -10,6 +10,7 @@ namespace Comun.Entidades
     {
         private string _nick;
         private string _password;
+        private Rol _rol;
 
         public Usuario()
             : base()
@@ -27,6 +28,12 @@ namespace Comun.Entidades
         {
             get { return _password; }
             set { _password = value; }
+        }
+
+        public virtual Rol Rol
+        {
+            get { return _rol; }
+            set { _rol = value; }
         }
     }
 }
