@@ -46,11 +46,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Dao\DaoBase.cs" />
+    <Compile Include="Dao\DaoMenu.cs" />
     <Compile Include="Dao\DaoPerfil.cs" />
+    <Compile Include="Dao\DaoRol.cs" />
     <Compile Include="Dao\DaoUsuario.cs" />
     <Compile Include="Fabrica\FabricaDao.cs" />
     <Compile Include="IDao\IDaoBase.cs" />
+    <Compile Include="IDao\IDaoMenu.cs" />
     <Compile Include="IDao\IDaoPerfil.cs" />
+    <Compile Include="IDao\IDaoRol.cs" />
     <Compile Include="IDao\IDaoUsuario.cs" />
     <Compile Include="NHibernate\NHibernateManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

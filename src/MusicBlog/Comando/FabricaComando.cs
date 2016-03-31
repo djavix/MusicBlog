@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 using Comando.ComandosPerfil;
 using Comando.ComandosUsuario;
 using Comun.Entidades;
+using Comando.ComandosMenu;
 
 namespace Comando
 {
     public class FabricaComando
     {
-        //Comandos de Usuario
+        #region Comandos Usuario
         public static AgregarUsuario ObtenerComandoAgregarUsuario(Usuario usuario)
         {
             return new AgregarUsuario(usuario);
@@ -46,8 +47,9 @@ namespace Comando
         {
             return new ValidarNickUsuario(usuario);
         }
+        #endregion
 
-        //Comandos de Perfil
+        #region Comando Perfil
         public static AgregarPerfil ObtenerComandoAgregarPerfil(Perfil perfil)
         {
             return new AgregarPerfil(perfil);
@@ -77,5 +79,14 @@ namespace Comando
         {
             return new BuscarPerfilPorUsuario(usuario);
         }
+        #endregion
+
+        #region Comandos Menu
+        public static BuscarMenus ObtenerComandoBuscarMenus(Boolean vof)
+        {
+            return new BuscarMenus(vof);
+        }
+        #endregion
+
     }
 }

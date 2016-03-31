@@ -40,9 +40,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entidades\Entidad.cs" />
+    <Compile Include="Entidades\Menu.cs" />
     <Compile Include="Entidades\Perfil.cs" />
     <Compile Include="Entidades\Rol.cs" />
     <Compile Include="Entidades\Usuario.cs" />
+    <Compile Include="Enum\EnumRol.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Recursos\ExpresionesRegulares.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -71,7 +73,10 @@
     <EmbeddedResource Include="Mapeos\Usuario.hbm.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Mapeos\Rol.hbm.xml" />
+    <EmbeddedResource Include="Mapeos\Rol.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mapeos\Menu.hbm.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

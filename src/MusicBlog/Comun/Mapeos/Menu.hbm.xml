@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="Comun.Entidades" assembly="Comun" auto-import="true">
+  <class name="Menu" table="MENU">
+    <id name="Id" column="ID">
+      <generator class="native"/>
+    </id>
+    <property name="Seccion"  column="SECCION" not-null="true" />
+    <property name="Nombre" column="NOMBREPAGINA" not-null="true"/>
+    <property name="Url" column="URL" not-null="true"/>
+
+  </class>
+</hibernate-mapping>

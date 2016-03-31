@@ -9,6 +9,7 @@ using Comando;
 using Presentador.Contratos;
 using Comun.Recursos;
 using Comun.Entidades;
+using Comun.Enum;
 using Comun.Utilidades;
 
 namespace Presentador.Presenters
@@ -168,7 +169,15 @@ namespace Presentador.Presenters
             Usuario usuario = new Usuario();
             usuario.Nick = view.Nick;
             usuario.Password = view.Password;
+            usuario.Rol = ObtenerRolUsuario();
             return usuario;
+        }
+
+        private Rol ObtenerRolUsuario()
+        {
+            Rol rol = new Rol();
+            rol.Id = (int)EnumRol.Usuario;
+            return rol;
         }
 
         #endregion

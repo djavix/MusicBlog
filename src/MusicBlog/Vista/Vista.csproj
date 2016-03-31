@@ -68,6 +68,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="MusicBlog2.master" />
     <None Include="Scripts\jquery-2.1.3.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.3.js" />
     <Content Include="Scripts\jquery-2.1.3.min.js" />
@@ -90,6 +91,13 @@
     </Compile>
     <Compile Include="MusicBlog.Master.designer.cs">
       <DependentUpon>MusicBlog.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MusicBlog2.master.cs">
+      <DependentUpon>MusicBlog2.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MusicBlog2.master.designer.cs">
+      <DependentUpon>MusicBlog2.master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Usuario\Login.aspx.cs">

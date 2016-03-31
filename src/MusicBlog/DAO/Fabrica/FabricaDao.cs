@@ -24,5 +24,10 @@ namespace DAO.Fabrica
         {
             return new DaoRol();
         }
+
+        public static IDaoMenu ObtenerDaoMenu()
+        {
+            return new DaoMenu();
+        }
     }
 }
